@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS classic</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <style>
+#root {
+  width: 100px;
+  height:100px;
+  background-color: blue;
+  margin:10px;
+  padding: 10px;
+  border: 1px solid red;
+  display: inline-block;
+}
+    </style>
+    
+<script>
+    var Hello = React.creaClass({
+        render: function() {
+            return (
+                <div>
+                    <h1>Hello form Kode</h1>
+                    <p>Maybe you prefer a hello from Adele</p>
+                </div>
+            );
+        }
+    });
+    ReactDOM.render(<Hello/>, document.getElementById('react-target'));
+    // function Person(props) {
+    //     return (
+    //         <div className="person">
+    //             <h1>Name: {props.name}</h1>
+    //             <p>Age: {props.age}</p>
+    //         </div>
+    //     )
+    // }    
+    // var app = (
+    //     <div>
+    //         <Person name="truong" age="25"/>
+    //         <Person name="nhat" age="24"/>
+    //     </div>
+    // )
+    // ReactDOM.render(app, document.querySelector('#root'));
+
+    //     ReactDOM.render(<Person name="Thanh" age="30"/>,
+    //     document.querySelector('#p1'));
+    ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
+function Person(props) {
+  return (
+    <div className="Person">
+      <h1>Name : {props.name} </h1>
+      <p>Age: {props.age}</p>
+    </div>
+  )
+};
+
+ReactDOM.render(<Person name="Thanh" age="19"/>,document.querySelector('#p1'));
+    
+ReactDOM.render(<Person name="tung" age="29"/>,document.querySelector('#p2'));
+</script>
+</head>
+
+<body>
+    <div id="react-target"></div>
+    <div id="root">
+
+    </div>
+    <div id="p1"></div>
+    <div id="p2"></div>
+</body>
+
+
+</html>
