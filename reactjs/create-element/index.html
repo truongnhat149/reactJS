@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create-element</title>
+</head>
+
+<body>
+    <!-- 
+    1. document.createElement() => tạo element
+    2. document.body.appendChild() thêm con vào 
+    3. console.dir()
+    4. innerText, id, className, style
+ -->
+    <div id="root">
+        <!-- kiến trúc trong reactJS -->
+    </div>
+    <script>
+        const root = document.getElementById('root');
+        //  const root = document.querySelector();
+        const h1 = document.createElement('h1');
+        const h2 = document.createElement('h2');
+        h1.innerText = "Hello guys!";
+
+        console.log(h1);
+        root.appendChild(h1);
+        h1.style = "color: green; margin: 40px";
+        h1.id = "h1-style";
+        h1.className = "class-style";
+        root.appendChild(h2);
+        h2.innerText = 'Hello every';
+        Object.assign(h2.style, {
+            color: "blue"
+        })
+        // document.body.appendChild(h1);
+    </script>
+
+</body>
+
+</html>

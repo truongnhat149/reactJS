@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- JSX là gì? => javascript XML
+
+    1. Luôn dùng React.creatElement() => vấn đề => khó tạo ra 1 base web 
+    2. JSX? Live demo : https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbTVmSmw3bzA1R3JpeXJ0UElYdlVoendLVlpPZ3xBQ3Jtc0tsSWdtQjFVMm5PTjNOWFB5NUI5ZkpPbnRab0hWcWg4aFhoVFpUTXNrNlZ6MmRjQUFDeFZEOElVZUF1TkQxNzRQbnJkTjZTUzNnX2lrb1hjYk5DTXMxVXFHTFB3OGRFOHhEWHc5dmFsSUs1YWI3Y0hJdw&q=https%3A%2F%2Fbit.ly%2F2VOIMN7
+    3. JSX không phải HTML
+     Cần có javascriptm babel để dùng JSX
+     4, JSX và React-DOM
+     
+     <ul>
+        <li>Javascript </li>
+        <li>React JS</li>
+     </ul>
+-->
+    <div id="root"></div>
+    <script type="text/babel">
+        const reactCourse = "ReactJS";
+
+        const ul = 
+        <ul>
+            <li>Javascript</li>
+            <li>React</li>
+        </ul>
+
+        ReactDOM.render(ul, document.getElementById('root'));
+
+        const courses = [
+            {
+                name: "HTML, CSS"
+            },
+            {
+                name: "Responsive web design RWD"
+            },
+            {
+                name: 'ReactJS'
+            }
+        ];
+
+        const ulTest = 
+        <ul>
+            <li>{courses[0]}</li>    
+            <li>{courses[1]}</li>
+            <li>{courses[2]}</li>
+        </ul>
+
+        ReactDOM.render(ulTest, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
