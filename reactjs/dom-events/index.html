@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>ReactJS</title>
+</head>
+
+<body>
+    <!-- 
+    -->
+<div id="root"></div>
+
+<script type="text/babel">
+
+const objArr = [{
+    "first_name": "david",
+    "gender": "Female",
+    "last_name": "john",
+    "password": "asdasd",
+    "status": 1,
+    "user_id": 1,
+    "username": "rogers63"
+}, {
+    "first_name": "rogers",
+    "gender": "Male",
+    "last_name": "paul",
+    "password": "qweqwe",
+    "status": 1,
+    "user_id": 2,
+    "username": "mike28"
+}];
+
+
+// function ObjArr(props) {
+//     return (
+//         <div className="post-list">
+//             <div className="post-item">{props.status}</div>
+//             <p>{props.user_id}</p>
+//             <p>{props.username}</p>
+//         </div>
+//     )
+// }
+
+// destructuring
+// arrow function
+const ObjItem = ({ obj })  => (
+    <div>
+        <h2>{obj.first_name}</h2>
+        <p>{obj.gender}</p>
+        <p>{obj.password}</p>
+        <p>{obj.status}</p>
+        <p>{obj.username}</p>
+    </div>
+)
+// function App() {
+//     return (
+//         <div id="wrapper">
+//             {objArr.map( obj => (
+//                <ObjItem
+//                 key={obj.user_id}
+//                 temp = {obj}
+//                /> 
+//             ))}
+//         </div>
+//     )
+// }
+
+function App() {
+    return (
+        <div id="wrapper">
+            <button onClick={
+                () => console.log(event.target)}
+                 > click me! 
+            </button>
+            <label htmlFor="input-1"></label>ReactJS
+            <input id="input-1" type="text"/>
+        </div>
+    )
+}
+
+ReactDOM.render(<App/>, document.getElementById('root'));
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>ReactJS</title>
+</head>
+
+<body>
+    <!-- 
+        Render list array
+        Không render được 2 Element cùng 1 lúc
+     -->
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const courses = [
+        {
+            name: 'HTML, CSS'
+        },
+        {
+            name: 'reponsive web design'
+        },
+        {
+            name: 'ReactJS'
+        }
+    ];
+        // const jsx = (
+        //     <ul>
+        //         {courses.map(course => 
+        //             <li>{course.name}</li>
+        //             )}
+        //     </ul>
+        // ); => báo lỗi key
+
+        // cách 2:
+        // const jsx = (
+        //     <ul>
+        //         {courses.map(course => 
+        //             React.createElement('li', null, course.name)
+        //             )}    
+        //     </ul>
+        // )
+
+        // const jsx = (
+        //     <ul>
+        //         {courses.map((course, index) => 
+        //             <li key={index}> {course.name}</li>
+        //             ) }
+        //     </ul>
+        // );
+
+            const jsx = (
+                <React.Fragment>
+                <h1>Heading h1</h1>
+                <h2>Heading h2</h2>
+                </React.Fragment>
+            );
+
+            const jsx2 = (
+                    React.createElement('React.Fragment', null, 
+                    React.createElement('h1', null, 'heading h1'),
+                    React.createElement('h2', null, 'heading h2')
+                    )
+            );
+
+        ReactDOM.render(jsx2, document.getElementById('root'));
+    </script>
+</body>
+
+</html>

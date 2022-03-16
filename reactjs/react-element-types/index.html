@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>ReactJS</title>
+</head>
+
+<body>
+    <!-- 
+       1. React element types: support string, function/class
+
+       - wrapper
+            - header => header component
+            - conntent => content component
+            - footer => footer component
+        2. Biểu diễn đơn giản với JSX
+    
+    -->
+<div id="root"></div>
+
+    <script type="text/babel">
+// quy ước trong đặt tên component theo Pascal case
+function Header() {
+    return (
+        <div className="header">
+            New Header
+        </div>
+    )
+}
+
+function Conntent() {
+    return (
+
+    <div className="content">
+        New Content
+        </div>
+    )
+}
+
+//  class component
+
+class Footer extends React.Component {
+    render() {
+        return (
+            <div className="footer">
+                New Footer
+            </div>
+        )
+    }
+}
+        const app = (
+            <div className="wrapper">
+                <Header/>
+                <Conntent/>
+                <Footer/>
+                </div>
+        );
+
+        // ReactDOM.render(app, document.getElementById('root'));
+
+
+        // bài tập thêm
+// <div>
+//     <div>
+//         <img src="" alt="">
+//         <h2></h2>    
+//         <p></p>
+//         <p></p>
+//     </div>    
+// </div>
+function PostItem() {
+    return (
+        <div className="post-Item">
+            <img src="https://www.google.com/search?q=%E1%BA%A3nh+nga+ng%E1%BB%91&sxsrf=APq-WBtjME2Jlztx0VkRGakIlPb3p1Pi-g:1647436146520&tbm=isch&source=iu&ictx=1&vet=1&fir=qbBHsKvs0kyWoM%252CoAoV3DhwIvSuUM%252C_%253BTafQQaNwZfBaZM%252CfsIUUxYaOsRHTM%252C_%253BotRZTqt9RtwXOM%252CjXEFrnvZQKuyrM%252C_%253BqVVaA2CsnlIMqM%252CsGlpj0c3OoWlVM%252C_%253BLS8NlMIBs2ZQ3M%252ClMGkNHGvKPBoqM%252C_%253BYHEU7HxG44PqWM%252C55LaBrvAiMEPlM%252C_%253Bnn0Ta7gl02znXM%252ClMGkNHGvKPBoqM%252C_%253BaBcmvGGSHEcyfM%252C49OjYXLbB7c03M%252C_%253Bvo5wadU02lDAgM%252CoAoV3DhwIvSuUM%252C_%253BhudzMr86xtCNPM%252CvPh8MW43_axSUM%252C_%253BLGb7oN3RsTi6LM%252CvkLqTQLXm6vMcM%252C_%253BIAVcrXcINKM-AM%252CvPh8MW43_axSUM%252C_%253BntkZYC38a_DAtM%252ClMGkNHGvKPBoqM%252C_%253BRolLDNVirJ11eM%252C55LaBrvAiMEPlM%252C_%253BctMdd0KBifyl2M%252CLK1pVjhSldbpfM%252C_%253B6OAUwv8lbNJu1M%252CvkLqTQLXm6vMcM%252C_&usg=AI4_-kSR8itwx0uTsqEEFGOF2qf2UFxLyQ&sa=X&ved=2ahUKEwj6qrby2cr2AhUrGqYKHSAZBPYQ9QF6BAgmEAE#imgrc=otRZTqt9RtwXOM" alt=""/>
+            <h2>Bài tập</h2>
+            <p>Học reactJS là dễ</p>
+            <p>Quan trọng là phải siêng</p>
+        </div>
+    )
+}
+        const app2 = (
+            <div className="post-list">
+                <PostItem/>
+            </div>
+        );
+
+        ReactDOM.render(app2, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
