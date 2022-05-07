@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+</head>
+<body>
+    <!-- useState Hook 
+    
+    - Dùng khi nào?
+    Khi muốn dữ liệu thay đổi thì giao diện tự động cập nhật (render lại theo dữ liệu)
+
+    
+    -->
+
+<script>
+
+// cách dùng
+
+    import {useState} from 'react'
+    
+    function Component() {
+        const [state, setState] = useState(initState)
+
+        // code
+    }
+
+</script>
+
+    <!-- 
+        Lưu ý 
+    - Component sẽ được render sau khi dùng setState
+    - Initial state chỉ dùng cho lần đầu
+    - setState với callback?
+    - Initial state với call back?
+    - Set state là thay thế state bằng giá trị mới
+    -->
+
+    <!-- 
+        // bài toán: khởi tạo 1 giá trị ban đầu cho 1 nút bấm.
+// khi bấm vào nút đó thì số tự động tăng lên 1
+
+// function App() {
+//   const [counter, setCounter] = useState(1)
+
+//   const handlerIncrease = () => {
+//       setCounter(counter + 1)
+//   }
+
+//   return (
+//     <div className="App" style={{ padding : 20 }}>
+//       <h1>{counter}</h1>
+//       <button onClick={handlerIncrease}>Increase</button>
+//     </div>
+//   );
+// }
+
+
+// sử dụng setState với callback
+
+// function App() {
+//   const [counter, setCounter] = useState(1)
+
+//   const handlerIncrease = () => {
+//       setCounter(prevState => prevState + 1)
+//       setCounter(prevState => prevState + 1)
+//       setCounter(prevState => prevState + 1)
+//   }
+
+//   return (
+//     <div className="App" style={{ padding : 20 }}>
+//       <h1>{counter}</h1>
+//       <button onClick={handlerIncrease}>Increase</button>
+//     </div>
+//   );
+// }
+
+// xử lí unit state
+
+// const orders = [100, 200, 300];
+
+// function App() {
+  
+ 
+
+//   const [counter, setCounter] = useState(() => {
+//     const total = orders.reduce((total, cur) => total + cur)
+//     console.log(total);
+//     return total;
+//   })
+
+//   const handlerIncrease = () => {
+//       setCounter(prevState => prevState + 1)
+//   }
+
+//   return (
+//     <div className="App" style={{ padding : 20 }}>
+//       <h1>{counter}</h1>
+//       <button onClick={handlerIncrease}>Increase</button>
+//     </div>
+//   );
+// }
+
+
+// thay thế info
+
+// function App() {
+ 
+//   const [info, setInfo] = useState({
+//     name : "Nguyen Van A",
+//     age: 18,
+//     address: "Hue, VN"
+//   })
+
+//   const handlerUpdate = () => {
+//     setInfo( prev => {
+//       return {
+//         ...prev,
+//         bio: 'Thích du lịch'
+//       }
+//     }) 
+//   }
+
+//   return (
+//     <div className="App" style={{ padding : 20 }}>
+//       <h1>{JSON.stringify(info)}</h1>
+//       <button onClick={handlerUpdate}>Update</button>
+//     </div>
+//   );
+// }
+     -->
+</body>
+</html>

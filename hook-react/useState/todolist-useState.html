@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- todo list -->
+    <!-- BÀI TOÁN -->
+    <!-- TẠO 1 ỨNG DỤNG ĐƠN GIẢN, NHẬP VÀO Ô INPUT VÀ TRẢ VỀ 1 LIST VỪA NHẬP -->
+
+    <!-- 
+
+        function App() {
+
+ const [job, setJob] = useState('')
+ const [jobs, setJobs] = useState(() => {
+   const storageJobs = JSON.parse(localStorage.getItem('jobs'))
+   console.log(storageJobs)
+   return storageJobs
+ })
+
+ const handlerSubmit = () => {
+  setJobs(prev => {
+    const newJobs = [...prev, job]
+
+    // save to local storage
+    const jsonJobs = JSON.stringify(newJobs)
+    localStorage.setItem('jobs', jsonJobs);
+
+    return newJobs;
+  })
+
+  setJob('')
+}
+
+  return(
+    <div style={{padding : 32}}>
+      <input 
+        value={job}
+        onChange={e => setJob(e.target.value)}
+      />
+      <button onClick={handlerSubmit}>Add</button>
+
+      <ul>
+        {jobs.map((job, index) => (
+          <li key={index}>{job}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+     -->
+</body>
+</html>

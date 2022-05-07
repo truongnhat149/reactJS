@@ -19,3 +19,9 @@
 ### JSX - JSX render
 ## React Element Types
 ### Props - DOM Events
+### Tạo component - JSX
+## Create React App
+## NPM NPX YARN
+## CRA Folder Structure
+## React Hook
+- useState

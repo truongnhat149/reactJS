@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+</head>
+<body>
+    <!-- 
+        Bài toán: cho 1 hộp quà gồm các phần thưởng là các em xinh tươi
+        cho trước,
+        - khi chưa bấm gì, thì mặc định sẽ là "Chưa có phần thưởng"
+        - Khi bấm vào thì ngẫu nhiên sẽ được 1 em
+     -->
+
+    <!-- 
+        const gifts = [
+  'Ngoc Trinh',
+  'Lan Ngoc',
+  'Kha Ngan',
+  'Thanh Hoa'
+]
+
+function App() {
+
+  const [gift, setGift] = useState()
+
+  const randomGift = () => {
+    const index = Math.floor(Math.random() * gifts.length)
+
+    console.log(index)
+    setGift(gifts[index]);
+  }
+ 
+  return(
+    <div style={{padding : 32}}>
+      <h1>{gift || 'Chưa có phần thưởng'}</h1>
+      <button onClick={randomGift}>Lấy Thưởng</button>
+    </div>
+  )
+}
+     -->
+
+
+
+     <!-- BÀI TOÁN 2 -->
+
+     <!-- cho 1 mảng gồm các khóa học như JVSCript, Java, ReactJS, là các ô check radio
+    ứng dụng two-way binding để khi submit được 2 chiều -->
+
+    <!-- 
+      const courses = [
+  {
+    id: 1,
+    name: "HTML/CSS"
+  },
+  {
+    id: 2,
+    name: "Java"
+  },
+  {
+    id: 3,
+    name: "ReactJS"
+  }
+]
+
+function App() {
+
+ const [checked, setChecked] = useState(2)
+ 
+ const handlerSubmit = () => {
+  // call API
+  console.log({id : checked})
+ }
+
+  return(
+    <div style={{padding : 32}}>
+      {courses.map(course => (
+        <div key={course.id}>
+          <input 
+            type="radio" 
+            checked={checked === course.id}
+            onChange={() => setChecked(course.id)}
+          />
+          {course.name}
+        </div>
+      ))}
+
+      <button onClick={handlerSubmit}>Register</button>
+    </div>
+  )
+}
+     -->
+
+     <!-- BÀI 2.1 -->
+
+     <!-- CHECKBOX -->
+
+     <!-- 
+       const courses = [
+  {
+    id: 1,
+    name: "HTML/CSS"
+  },
+  {
+    id: 2,
+    name: "Java"
+  },
+  {
+    id: 3,
+    name: "ReactJS"
+  }
+]
+
+function App() {
+
+ const [checked, setChecked] = useState([])
+ 
+ const handleCheck = (id) => {
+    setChecked(prev => {
+      const isChecked = checked.includes(id)
+      if (isChecked) {
+        // Uncheck
+        return checked.filter(item => item !== id);
+      } else {
+        return [...prev, id]
+      }
+    })
+ }
+
+ const handlerSubmit = () => {
+  // call API
+  console.log({id : checked})
+ }
+
+  return(
+    <div style={{padding : 32}}>
+      {courses.map(course => (
+        <div key={course.id}>
+          <input 
+            type="checkbox" 
+            checked={checked.includes(course.id)}
+            onChange={() => handleCheck(course.id)}
+          />
+          {course.name}
+        </div>
+      ))}
+
+      <button onClick={handlerSubmit}>Register</button>
+    </div>
+  )
+}
+      -->
+</body>
+</html>

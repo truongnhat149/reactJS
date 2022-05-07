@@ -1,0 +1,134 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>ReactJS</title>
+</head>
+
+<body>
+    <!-- 
+        I. 
+        - Xử lí DOM Events
+        - Component phải in hoa kí tự đầu
+        - Chọn component trong 1 obj
+        
+        Booleans, null, underfined kh được rendẻ
+        - Kết hợp toán tử logic để render theo điều kiện
+
+    -->
+<div id="root"></div>
+
+<script type="text/babel">
+
+
+function Button({ title, href, onClick }) {
+    let Component = 'button'
+    let Example = 'Input'
+
+    const props = {}
+
+    if (href) {
+
+    }
+
+    if (onClick) {
+        props.onClick = onClick
+    }
+    return (
+        <Component {...props}>{title}</Component>
+
+    )
+}
+
+function App({ title, content }) {
+    let firstAccess = true
+    return (
+        <div id="wrapper">
+                <h1>{title || content}</h1>
+        </div>
+    )
+}
+
+// const Form = {
+//     Input() {
+//         return <input/>
+//     },
+//     Checkbox() {
+//         return <input type="checkbox"/>
+//     }
+// }
+
+
+// function App() {
+//     return (
+//         <div id="wrapper">
+//             <Form.Input/>
+
+//         </div>
+//     )
+// }
+
+ReactDOM.render(<App content="content"/> , document.getElementById('root'));
+// const objArr = [{
+//     "first_name": "david",
+//     "gender": "Female",
+//     "last_name": "john",
+//     "password": "asdasd",
+//     "status": 1,
+//     "user_id": 1,
+//     "username": "rogers63"
+// }, {
+//     "first_name": "rogers",
+//     "gender": "Male",
+//     "last_name": "paul",
+//     "password": "qweqwe",
+//     "status": 1,
+//     "user_id": 2,
+//     "username": "mike28"
+// }];
+
+// function ObjItem ({ objA }) {
+//     return (
+//         <div>
+//             <h2 
+//                 onClick={() => console.log(objA.gender)}
+//             >
+//                 {objA.status}
+//             </h2>
+//             <p>{objA.password}</p>
+//             <p>{objA.user_id}</p>
+//         </div>
+//     )
+    
+// }
+
+// function App() {
+//     // useCallback
+//     const handerClick = (objA) => {
+//         console.log(objA.password)
+//     }
+//     return (
+//         <div id="wrapper">
+//             {objArr.map( obj => (
+//                 <ObjItem
+//                     key={obj.id}
+//                     obj={obj}
+//                     onClick={handerClick}
+//                 />
+//             ))}
+//         </div>
+//     )
+// }
+
+// ReactDOM.render(<App/>, document.getElementById('root'));
+
+
+</script>
+</body>
+
+</html>

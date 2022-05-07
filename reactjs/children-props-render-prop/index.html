@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>ReactJS</title>
+</head>
+<body>
+
+    <div id="root">
+
+    </div>
+
+<!-- 
+    Props trong JSX
+    -   <Yourcomponent
+            propName1="String literals"
+            propsName2={expression}
+        />
+        - Props default to "true"
+        - Spread / Rest Props
+        - Children prop
+            - <YourComponent> String Literals </YourComponent>
+            - <YourComponent> {expression} </YourComponent>
+ -->
+
+
+    <script type="text/babel">
+
+// String literals
+        // function Button( {title} ) {
+        //     return <button> {title} </button>
+        // }
+
+        // function App() {
+        //     const title = "Code Gym";
+        //     return (
+        //         <div id="wrapper">
+        //             <Button title= {title} />
+        //         </div>
+        //     )
+        // }
+
+
+// Expression
+
+        // function Button( {title, primary} ) {
+        //         console.log(primary);
+
+        //         return <button> {title} </button>
+        // }
+
+        // function App() {
+        //     const title = "Code Gym";
+        //     return (
+        //         <div id="wrapper">
+        //             <Button primary={true} title= {title} />
+        //         </div>
+        //     )
+        // }
+
+
+// spread ... props
+
+        // function Input({ label, type, placeholder }) {
+        //     return (
+        //         <div>
+        //             <label>{label}</label>                    
+        //             <input type={type} placeholder={placeholder}/>
+        //         </div>
+        //     )
+        // }
+
+        // function Input({ label, ...inputProps }) {
+        //     return (
+        //         <div>
+        //             <label>{label}</label>                    
+        //             <input {...inputProps}/>
+        //         </div>
+        //     )
+        // }
+
+        // function App() {
+        //     return (
+        //         <div id="wrapper">
+        //             <Input
+        //                 label="Full name"
+        //                 type="radio"
+        //                 placeholder= "Enter here"
+        //                 title="Day la input"
+        //                 onFocus= {() => {
+        //                     console.log(Math.random())
+        //                 }
+        //                 }
+        //             />
+        //         </div>
+        //     )
+        // }
+
+// Children prop
+        // function Button ({ children }) {
+        //     return (
+        //         <button>{children}</button>
+        //     )
+        // }
+
+        // function App() {
+        //     return (
+        //         <div id="wrapper">
+        //             <Button>{ false && "Click me!" }</Button>
+        //         </div>
+        //     )
+        // }
+
+        // function List ({ data }) {
+        //     return (
+        //         <ul>
+        //             {data.map(item => <li key={item}> {item} </li>)}    
+        //         </ul>
+        //     )
+        // }
+
+        // function App() {
+        //     const cars = ['BMW', 'Honda', 'Vinfast'];
+
+        //     return (
+        //         <div id="wrapper">
+        //             <List data={cars}>
+        //                 {(item) => <li>{item}</li>}
+        //             </List>
+        //         </div>
+        //     )
+        // }
+
+        function List ({ data, children }) {
+            return (
+                <ul>
+                    {data.map((...props) => children(...props))}
+                </ul>
+            )
+        }
+
+        function App() {
+            const cars = ['BMW', 'Honda', 'Vinfast'];
+
+            return (
+                <div id="wrapper">
+                    <List data={cars}>
+                        {(item, index) => <li key={index}>{item}</li>}
+                    </List>
+                </div>
+            )
+        }
+
+
+        ReactDOM.render(<App/>, document.getElementById('root'));
+    </script>
+</body>
+</html>
