@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        // Fake comments
+
+function emitComment(id) {
+  setInterval(() => {
+    window.dispatchEvent(
+      new CustomEvent(`lesson-${id}`,
+        {detail: `Nội dung comment của lesson ${id}`}
+      )
+    )
+  })
+}
+
+// có 3 trường hợp:
+    // 1. useEffect(callback)
+    // - Gọi callback mỗi khi component re-render
+    // 2. useEffect(callback, [])
+    // 3. useEffect(callback, [desp])
+    //----------------------
+
+import { useEffect, useState } from "react";
+
+    // 1. callback luôn được gọi sau khi component mounted
+    // 2. CleanUp function luôn được gọi trước khi component unmounted
+    // 3. CleanUp function luôn đc gọi trước khi callback được gọi unmounted
+
+
+    const lessons = [
+        {
+            id: 1,
+            name: 'HTML'
+        },
+        { 
+            id: 2,
+            name: 'Java'
+        },
+        { 
+            id: 3,
+            name: 'Python'
+        }
+    ]
+
+function Content() {
+
+    const [lessonId, setLessonId] = useState(1)
+
+    useEffect(() => {
+
+        const handleComment = ({ detail }) => {
+            console.log(detail)
+        }
+        window.addEventListener(`lesson-${lessonId}`, handleComment)
+
+        // CleanUp func
+        return () => {
+            window.removeEventListener(`lesson-${lessonId}`, handleComment)
+            
+        }
+
+    }, [lessonId])
+    return (
+            <div>
+              <ul>
+                {lessons.map(lesson => (
+                    <li 
+                        key={lesson.id}
+                        style={{
+                            color: lessonId === lesson.id ?
+                                'red' : '#333'
+                        }}
+                        onClick={() => setLessonId(lesson.id)}
+                        >
+                        {lesson.name}
+                    </li>
+                ))}
+              </ul>
+            </div>
+        )
+}
+
+export default Content;
+     -->
+</body>
+</html>

@@ -1,17 +1,28 @@
+import { useContext } from 'react';
+import { ThemeContext, ThemeProvider } from './ThemeContext'
+import Content from './Content'
+import './App.css'
 
-import { useState } from 'react'
 
-import Content from './Content';
+// Context
+// CompA => CompB => CompC
+
+// Theme Dark / Light
+
+// 1. Create Context
+// 2. Provider
+// 3. Consumer
 
 function App() {
-
-  const [show, setShow] = useState(false)
+ 
+  const context = useContext(ThemeContext)
 
   return(
-    <div style={{padding : 32}}>
-      <button onClick={() => setShow(!show)}>Toggle</button>
-       {show && <Content/>}
-    </div>
+   
+      <div style={{padding : '10px 32px'}}>
+        <button onClick={context.toggleTheme}>Toggle Theme</button>
+        <Content />
+      </div>
   )
 }
 

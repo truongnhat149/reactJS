@@ -1,10 +1,12 @@
+import { memo } from "react";
+import Paragraph from "./Paragraph";
 
-
-function Content() {
-
+function Content( {theme} ) {
     return (
-        <h1>Hi anh em Code Gym</h1>
-    )
+            <div>
+                <Paragraph theme={theme}/>
+            </div>
+        )
 }
 
-export default Content;
+export default memo(Content);

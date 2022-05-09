@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- CÁCH BÌNH THƯỜNG, THÌ PHẢI IMPORT TỪ TẤT CẢ CÁC FILE CHA THÌ FILE CON MỚI HIỂN THỊ ĐƯỢC -->
+
+    <!-- import { useState } from 'react'
+import Content from './Content'
+import './App.css'
+// Context
+// CompA => CompB => CompC
+
+// Theme Dark / Light
+
+// 1. Create Context
+// 2. Provider
+// 3. Consumer
+
+function App() {
+  const [theme, setTheme] = useState('dark')
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
+  return(
+    <div style={{padding : '10px 32px'}}>
+      <button onClick={toggleTheme}>Toggle Theme</button>
+      <Content theme={theme}/>
+    </div>
+  )
+}
+
+export default App; -->
+
+<!-- import { memo } from "react";
+import Paragraph from "./Paragraph";
+
+function Content( {theme} ) {
+    return (
+            <div>
+                <Paragraph theme={theme}/>
+            </div>
+        )
+}
+
+export default memo(Content); -->
+
+
+<!-- 
+function Paragraph( {theme} ) {
+    console.log(theme);
+
+    return (
+
+        <p className={theme}>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem enim id quae commodi sunt iusto quod, dolorum dolores consectetur esse accusantium non odit voluptatum? Mollitia similique excepturi veritatis voluptatem recusandae?
+        </p>
+    )
+}
+
+export default Paragraph -->
+
+
+<!-- dùng createContext -->
+
+</body>
+</html>
