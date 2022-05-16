@@ -1,0 +1,1 @@
+// khái niệm chỉ cho một số hàm hoặc một số chức năng thực thi trên một nền tảng nào đó
